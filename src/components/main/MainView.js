@@ -2,7 +2,7 @@
  * Created by datdao on 6/20/17.
  */
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity
+import {View, Text, TouchableOpacity, Button
 } from 'react-native';
 
 
@@ -17,6 +17,18 @@ export default class MainView extends Component {
                 }>
                     <Text>open</Text>
                 </TouchableOpacity>
+                <Button
+                    title="DetailProduct"
+                    onPress={() =>
+                      this.props.navigate('DetailProduct', { name: 'Jane', navigate: this.props.navigate })
+                    }
+                />
+                <Button
+                    title="list Product"
+                    onPress={() =>
+                      this.props.navigate('ListProduct', { name: 'Jane', navigate: this.props.navigate })
+                    }
+                />
             </View>
         );
     }

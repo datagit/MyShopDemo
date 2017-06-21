@@ -13,11 +13,12 @@ export default class ControlPanel extends Component {
             <View style={{flex: 1, backgroundColor: 'yellow'}}>
                 <Text>ControlPanel</Text>
                 <Button
-                    title="Go to authentication"
+                    title="authentication"
                     onPress={() =>
-                      this.props.navigate('Authentication', { name: 'Jane' })
+                      this.props.navigate('Authentication', { name: 'Jane', navigate: this.props.navigate })
                     }
                 />
+
             </View>
         );
     }

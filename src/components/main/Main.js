@@ -27,7 +27,9 @@ export default class Main extends Component {
                 tapToClose={true}
                 content={<ControlPanel navigate={navigate} />}
             >
-                <MainView onOpen={this.openControlPanel.bind(this)}/>
+                <MainView
+                    navigate={navigate}
+                    onOpen={this.openControlPanel.bind(this)}/>
             </Drawer>
         );
     }
