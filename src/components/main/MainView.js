@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {
-    View, Text, TouchableOpacity, Button, Image, TextInput
+    View, Text, TouchableOpacity, Button, Image, TextInput, Dimensions
 } from 'react-native';
 
 import TabNavigator from 'react-native-tab-navigator';
@@ -30,7 +30,9 @@ export default class MainView extends Component {
         };
     }
 
+
     render() {
+
         return (
             <TabNavigator>
                 <TabNavigator.Item
@@ -44,7 +46,7 @@ export default class MainView extends Component {
 
                     {/*st body in tab*/}
                     <View>
-                        <Header style={{height: 200}} openFunc={this.props.onOpen}/>
+                        <Header openFunc={this.props.onOpen}/>
 
                         <Text>MainView</Text>
 
